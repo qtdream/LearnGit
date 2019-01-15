@@ -1,0 +1,18 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>
+      Camera
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+	<button ion-button (click)="openCamera()">打开摄像头</button>
+ 
+<div>
+    <img [src]="path" />
+  </div>
+  <button ion-button color="secondary" (click)="doCamera()">拍照</button>
+  <img *ngIf="base64Image" [src]="base64Image" />
+  <a>{{base64Image}}</a>
+</ion-content>
